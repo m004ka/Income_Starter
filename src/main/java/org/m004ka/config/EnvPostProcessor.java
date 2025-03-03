@@ -1,4 +1,4 @@
-package org.example.config;
+package org.m004ka.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.env.EnvironmentPostProcessor;
@@ -18,8 +18,8 @@ public class EnvPostProcessor implements EnvironmentPostProcessor {
 
     @Override
     public void postProcessEnvironment(ConfigurableEnvironment environment, SpringApplication application) {
-        var resource = new ClassPathResource("default.yaml"); // определяем default.yaml как локальный ресурс
-        PropertySource<?> propertySource = null;
+        var resource = new ClassPathResource("default.yml"); // определяем default.yaml как локальный ресурс
+        PropertySource<?> propertySource;
         try {
 
             propertySource = propertySourceLoader.load("loan", resource).get(0);

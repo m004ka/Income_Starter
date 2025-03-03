@@ -1,7 +1,7 @@
-package org.example.service;
+package org.m004ka.service;
 
 import lombok.AllArgsConstructor;
-import org.example.dto.UserDTO;
+import org.m004ka.dto.UserDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
@@ -13,7 +13,6 @@ import java.util.Optional;
 public class IncomeService {
 
     private String link;
-
 
     public int getIncome(Long id) {
         RestTemplate restTemplate = new RestTemplate();
